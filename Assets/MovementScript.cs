@@ -9,9 +9,8 @@ public class MovementScript : MonoBehaviour
     public float Speed;
     [SerializeField]
     private GameObject Bob;
-    public KeyCode Right;
-    public KeyCode Left;
     public KeyCode killKey;
+    public string movementAxis = "Horizontal";
 
     private void Start()
     {
@@ -33,15 +32,11 @@ public class MovementScript : MonoBehaviour
 
     public void Update()
     {
-        if (Input.GetKey(Right))
-        {
-            Bob.transform.Translate(new Vector2(Speed * Time.deltaTime, 0));
-        }
+        float axis = Input.GetAxis(movementAxis);
 
-        if (Input.GetKey(Left))
-        {
-            Bob.transform.Translate(new Vector2(-Speed * Time.deltaTime, 0));
-        }
+        
+        Bob.transform.Translate(new Vector2(axis * Speed * Time.deltaTime, 0));
+
 
         if (Input.GetKey(killKey))
         {

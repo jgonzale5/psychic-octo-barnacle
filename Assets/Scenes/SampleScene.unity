@@ -195,7 +195,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_BoundingSphereOverride: {x: 2.671e-42, y: 1.01e-43, z: 980710.94, w: 0}
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
@@ -405,9 +405,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Speed: 5
   Bob: {fileID: 1797080530}
-  Right: 100
-  Left: 97
   killKey: 102
+  movementAxis: Horizontal
 --- !u!1 &1810527593
 GameObject:
   m_ObjectHideFlags: 0
@@ -456,9 +455,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Speed: 3
   Bob: {fileID: 1810527593}
-  Right: 275
-  Left: 276
   killKey: 0
+  movementAxis: ChildHorizontal
 --- !u!65 &1810527596
 BoxCollider:
   m_ObjectHideFlags: 0
